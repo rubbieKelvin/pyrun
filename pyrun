@@ -1,0 +1,5 @@
+#!/bin/bash
+export _pyrun_shell_command=$(python3 $(dirname $0)/app/main.py $1) $@
+echo -e "\e[32m$ $_pyrun_shell_command\e[0m"
+eval $_pyrun_shell_command
+unset _pyrun_shell_command
